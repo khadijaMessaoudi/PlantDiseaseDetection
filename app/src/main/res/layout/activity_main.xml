@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Titre de l'application -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Détection des Maladies des Plantes"
+        android:textColor="@color/green"
+        android:textSize="25sp"
+        android:gravity="center" />
+
+    <!-- ImageView pour afficher l'image -->
+    <ImageView
+        android:id="@+id/plant_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_placeholder"
+        android:scaleType="centerCrop"
+        android:background="@drawable/image_border"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Bouton pour choisir une image -->
+    <Button
+        android:id="@+id/select_or_take_photo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plant_image"
+        android:layout_marginTop="10dp"
+        android:text="Choisir ou Prendre une Photo"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+
+    <!-- Bouton pour prédire -->
+    <Button
+        android:id="@+id/predict_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_or_take_photo_button"
+        android:layout_marginTop="10dp"
+        android:text="Predict"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+
+    <!-- Texte pour afficher les résultats CNN -->
+    <TextView
+        android:id="@+id/cnnResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/predict_button"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Résultat :"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <!-- Texte pour afficher l'humidité et la température -->
+    <TextView
+        android:id="@+id/humidite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cnnResultTextView"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Humidité"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cnnResultTextView"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Température"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</RelativeLayout>
